@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:yellow">
+{{i.rol}}<br>
+{{i.name}}
+{{i.age}}
+{{i.salary}}
+
+    <table style="width:100%" border="2">
+  <tr>
+    <th>Roll number</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>salary</th>
+  </tr>
+    {% for i in d %}
+
+  <tr>
+    <td>{{i.rol}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+      <td>{{i.salary}}</td>
+  </tr>
+      {% endfor %}
+</table>
+<br><br>
+{{i.use}}<br>
+{{i.pswd}}
+
+
+    <table style="width:100%" border="2">
+  <tr>
+    <th>User Name</th>
+    <th>Password</th>
+
+  </tr>
+    {% for i in e %}
+
+  <tr>
+    <td>{{i.use}}</td>
+    <td>{{i.pswd}}</td>
+  </tr>
+      {% endfor %}
+</table>
+
+</body>
+</html>

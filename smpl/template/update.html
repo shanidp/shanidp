@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="upd" method="post">
+    {% csrf_token %}
+    {% for i in r %}
+    <input type="number" name="x1" value="{{i.roll}}">
+    <input type="text" name="x2" value="{{i.name}}">
+    <input type="number" name="x3" value="{{i.age}}">
+    <input type="submit" value="update">
+    {% endfor %}
+</form>
+
+</body>
+</html>

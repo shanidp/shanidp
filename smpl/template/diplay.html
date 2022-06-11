@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{i.roll}}<br>
+{{i.name}}
+{{i.age}}
+
+    <table style="width:100%" border="2">
+  <tr>
+    <th>Roll number</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>progress</th>
+    <th>delete</th>
+    <th>image</th>
+  </tr>
+    {% for i in r %}
+
+  <tr>
+    <td>{{i.roll}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+    <td>
+      {% if i.age < 22 %}
+      pass
+      {% else %}
+      failed</td>
+      {% endif %}
+      <td><input type="button" value="delete"></td>
+    <td><img src="{{i.image.url}}"height:50;width:40;></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

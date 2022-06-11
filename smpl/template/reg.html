@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:tomato">
+<center><h1 style="color:white"><b>REGISTER</b></h1></center>
+<form action="reg" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label>Roll number:</label>
+    <input type="number" name="y1"><br><br>
+        <label>Name      :</label>
+    <input type="text" name="y2"><br><br>
+        <label>Age       :</label>
+    <input type="number" name="y3"><br><br>
+    <input type="file" name="y4">
+    <input type="submit" value="register">
+</form>
+<a href="diplay">Display</a>
+<form action="reg1" method="get">
+    <input type="submit" value="click">
+    <table style="width:100%" border="2">
+  <tr>
+    <th>Roll number</th>
+    <th>Name</th>
+    <th>Age</th>
+      <th>progress</th>
+      <th>image</th>
+  </tr>
+    {% for i in r %}
+
+  <tr>
+    <td>{{i.roll}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.age}}</td>
+      <td>        {% if i.age < 22 %}
+        pass
+        {% else %}
+        failed</td>
+      <td><img src=" {{i.image.url}}"></td>
+  </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+
+</form><br><br>
+<form action="reg2" method="post">
+    {% csrf_token %}
+    <input type="number" name="v1"><br><br>
+    <input type="submit" value="search">
+</form>
+<form action="reg3" method="post">
+    {% csrf_token %}
+    <input type="number" name="h1"><br><br>
+    <input type="submit" value="delete">
+</form>
+</body>
+</html>

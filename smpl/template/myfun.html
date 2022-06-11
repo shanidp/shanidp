@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% static load %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url({% static 'IMG.jpg" %})>
+<h1 style="color:red;text-align:center;">welcome </h1>
+<form action="mf" method="post" style="color:blue">
+    {% csrf_token %}
+    <input type="text" name="n1" placeholder="enter number"><br><br>
+    <input type="submit" value="next">
+</form>
+<form action="mf1" method="post">
+    {% csrf_token %}
+    <input type="text" name="r1" placeholder="enter str"><br><br>
+    <input type="submit" value="next">
+</form>
+<h1>fact of {{x1}}={{x2}}</h1>
+<h1>revers of {{y1}}={{y2}}</h1>
+<form action="x1" method="POST">
+    {% csrf_token %}
+    <input type="text" name="n1">
+    <input type="text" name="n2">
+    <input type="text" name="n3">
+    <input type="submit" value="next">
+</form>
+<h1>largest of {{a1}},{{a2}},{{a3}}={{a4}}</h1>
+<form action="x2" method="POST">
+    {% csrf_token %}
+    <input type="text" name="n1">
+    <input type="submit" value="next">
+</form>
+<h1>the given number is {{a1}}</h1>
+</body>
+
+</html>

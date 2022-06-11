@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'first.js' %}"></script>
+</head>
+<body class="cover" >
+<!--<img src="{% static 'IMG.jpg' %}">-->
+
+<h1>list</h1>
+<form action="h1" method="post">
+    {% csrf_token %}
+    <input type="text" name="v1"><br>
+    <input type="text" name="v2"><br>
+    <input type="text" name="v3"><br>
+    <input type="text" name="v4"><br>
+    <input type="submit" value="ok">
+</form>
+
+<h1> the list l={{x}}</h1>
+
+</body>
+</html>

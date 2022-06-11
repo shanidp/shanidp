@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>reset paasword</h1>
+{{g}}
+<form action="ch" method="post">
+    {% csrf_token %}
+    {% for i in g %}
+    <input type="text" name="j1" value="{{i.use}}">
+    <input type="number" name="j2" value="{{i.pswd}}">
+    <input type="text" name="j3" value="{{i.use}}">
+    <input type="submit" value="reset">
+    {% endfor %}
+</form>
+</body>
+</html>

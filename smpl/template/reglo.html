@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:tomato;">
+<center><h1>Registration </h1></center>
+<form action="rl" method="post">
+    {% csrf_token %}
+    <label>Roll number:</label>
+    <input type="number" name="a1"><br><br>
+    <label>name:</label>
+    <input type="text" name="a2"><br><br>
+    <label>Age:</label>
+    <input type="number" name="a3"><br><br>
+    <label>Salary:</label>
+    <input type="number" name="a4"><br><br>
+    <label>User name:</label>
+    <input type="text" name="a5"><br><br>
+    <label>Pass word:</label>
+    <input type="text" name="a6"><br><br>
+    <input type="submit" value="register">
+</form>
+<a href="home">view</a>
+<center><h1>Login</h1></center>
+<form action="lo" method="post">
+    {% csrf_token %}
+    <label>User Name:</label>
+    <input type="text" name="c1"><br><br>
+    <label>Password:</label>
+    <input type="number" name="c2"><br><br>
+    <input type="submit" value="login" >
+</form>
+<form action="re" method="post">
+    {% csrf_token %}
+    <input type="text" name="z1"><br><br>
+    <input type="submit" value="search">
+</form>
+</body>
+</html>
